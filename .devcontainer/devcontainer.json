@@ -1,5 +1,10 @@
 {
   "image": "mcr.microsoft.com/devcontainers/python:latest",
   "features": {
-  }
+  },
+  "onCreateCommand": [
+    "apt-get -y install curl",
+    "curl -fsSL https://get.docker.com -o get-docker.sh",
+    "sudo sh get-docker.sh"
+  ]
 }
