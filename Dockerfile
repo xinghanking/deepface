@@ -7,4 +7,5 @@ COPY . .
 RUN apt-get upgrade
 RUN python -m pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
-CMD ["python", "main.py"]
+RUN chmod +x bin/run.sh
+RUN bin/run.sh start
