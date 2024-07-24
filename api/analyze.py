@@ -1,5 +1,4 @@
 import logging
-
 from deepface import DeepFace
 from fastapi import APIRouter
 from pydantic import BaseModel
