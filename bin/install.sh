@@ -6,5 +6,5 @@ python -m venv .venv
 source .venv/Scripts/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
-
+chmod +x bin/run.sh
 ./bin/run.sh start
