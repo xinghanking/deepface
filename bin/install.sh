@@ -5,6 +5,6 @@ cd "$BASE_ROOT"
 python -m venv .venv
 source .venv/Scripts/activate
 python -m pip install --upgrade pip
-pip install -r requirements.txt
+pip install -r requirements.txt --no-cache-dir
 chmod +x bin/run.sh
 ./bin/run.sh start
