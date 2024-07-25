@@ -5,7 +5,7 @@ PORT=8000
 WORKERS=1
 
 BASE_ROOT=$(dirname $(dirname "$(readlink -f "$0")"))
-LOG_PATH="$BASE_ROOT/logrun.log"
+LOG_PATH="$BASE_ROOT/log/run.log"
 APP_NAME="main"
 VENV_PATH="$BASE_ROOT/.venv"
 source "$VENV_PATH/bin/activate"
@@ -25,7 +25,7 @@ reload() {
 stop() {
     echo "Stopping Uvicorn server..."
     PID=$(lsof -t -i :$PORT)
-    kill -TERM uvicorn
+    kill -TERM "$PID"
 }
 
 case "$1" in
