@@ -3,7 +3,7 @@
 BASE_ROOT=$(dirname $(dirname "$(readlink -f "$0")"))
 cd "$BASE_ROOT"
 python -m venv .venv
-source .venv/Scripts/activate
+source .venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt --no-cache-dir
 chmod +x bin/run.sh
