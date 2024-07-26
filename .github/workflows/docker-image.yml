@@ -2,15 +2,14 @@ name: Docker Image CI
 
 on:
   push:
-    branches:
-      - main
+    branches: ['release']
 
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  push_to_registry:
+  build-and-push-image:
     name: Push image to Docker Hub
     runs-on: ubuntu-latest
     permissions:
